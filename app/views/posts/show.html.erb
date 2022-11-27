@@ -1,0 +1,7 @@
+
+  <p>Title: <%= @post.title%></p>
+ <p>Body: <%= @post.body %></p>
+ <p>Author: <%= @post.user.email %></p>
+ <% if @post.user_id == @user.id %>
+    <%= link_to 'edit post', edit_user_post_path(@user, @post) %>
+ <% end %>

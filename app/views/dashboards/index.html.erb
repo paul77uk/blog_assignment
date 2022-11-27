@@ -1,0 +1,9 @@
+<h1>Welcome</h1>
+
+<% Post.all.each do |post| %>
+  <p><%= link_to post.title, user_post_path(@user, post) %> by <em><%= post.user.email %></em></p>
+<% end %>
+<br>
+<%= link_to 'New Post', new_user_post_path(@user) %>
+
+
